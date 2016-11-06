@@ -15,6 +15,7 @@ var LessPluginAutoPrefix = require('less-plugin-autoprefix'),
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload
+var gulpConcat = require('gulp-concat');
 
 
 
@@ -27,9 +28,11 @@ gulp.task('scripts', function(){
   //source all JS files contained in app/js/.. folders
   //More info glob patterns
   gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
+    .pipe(gulpConcat('all.js'))
+    .pipe(gulp.dest('app/dist/js/'))
     .pipe(rename({ suffix: '.min' }))
-    //.pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/dist/js/'))
     .pipe(reload({stream:true}));
 });
 
@@ -52,7 +55,7 @@ gulp.task('less', function(){
       })
     )*/
 
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('app/dist/css/'))
     .pipe(reload({stream:true}));
 });
 
