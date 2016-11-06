@@ -28,7 +28,7 @@ gulp.task('scripts', function(){
   //More info glob patterns
   gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
     .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('app/js'))
     .pipe(reload({stream:true}));
 });
