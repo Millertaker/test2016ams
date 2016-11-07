@@ -5,12 +5,14 @@
   <link rel="stylesheet" type="text/css" href="dist/css/allmin.css">
 </head>
 <body ng-app="cityApp">
-  <h1 class="app-title">Events in Amsterdam</h1>
 
-  <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, purus eget convallis porta, ligula risus congue quam, vel sodales mauris mi at odio. Etiam quis mauris libero. Morbi id ullamcorper ante. Cras et arcu eros. Quisque dignissim turpis sit amet felis facilisis, non imperdiet urna lobortis. Ut venenatis ligula vel risus venenatis, sit amet feugiat neque consequat. Vestibulum sit amet orci pretium odio imperdiet ultrices a a felis. Etiam tempus eleifend felis, ut tincidunt mauris aliquam fermentum. Nam vel vulputate lectus, et interdum ante. Nulla a est laoreet ligula finibus blandit vel rutrum velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis vestibulum arcu turpis, nec pulvinar metus convallis eget. Duis non justo suscipit, tristique metus vitae, dapibus neque. Nam maximus tortor at vulputate semper.
-    </p>
-  </div>
+  <h1 class="app-title">Events in Amsterdam</h1>
+  <!-- Main content -->
+  <section class="fullsizedcontent">
+    <div ng-view>
+    </div>
+  </section>
+  <!-- /.content -->
 
   <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
   <script src="bower_components/angular-loader/angular-loader.min.js" type="text/javascript"></script>

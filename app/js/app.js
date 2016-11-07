@@ -18,6 +18,3 @@ cityApp.config(['$routeProvider',
       })
   }]);
 
-
-var cityAppControllers = angular.module('cityAppControllers', []);
-
