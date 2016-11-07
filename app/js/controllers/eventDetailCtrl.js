@@ -1,13 +1,13 @@
 /**
 *
-* Events Controller
+* EventDetail Controller
 */
 
-cityApp.controller('eventsCtrl',
+cityApp.controller('eventsDetailCtrl',
   function($scope, $http){
     $scope.events = [];
     $scope.size = 0;
-    $scope.url = 'http://citysdk.dmci.hva.nl/CitySDK/events/search?category=festival';
+    $scope.base_url = 'http://citysdk.dmci.hva.nl/CitySDK/events/search?category=festival';
 
     $http.get($scope.url).
       success(function(data) {
