@@ -32,6 +32,7 @@ $ bower install
 ### Run project
 
 The current project uses Gulp to run local server through [browser-sync](https://www.browsersync.io/docs/gulp) pluging
+run this command from the root of the project /
 
 ```sh
 $ gulp
