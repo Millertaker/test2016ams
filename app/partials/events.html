@@ -7,7 +7,7 @@
     <li ng-repeat="event in events">
       <p>{{event.label[0].value}}</p>
 
-      <a class="detail" href="#/event">See detail</a>
+      <a class="detail" ng-href="#/event/{{event.id}}">See detail</a>
     </li>
   </ul>
 </div>

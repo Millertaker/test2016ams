@@ -16,9 +16,9 @@ cityApp.config(['$routeProvider',
         templateUrl: 'partials/events.html',
         controller: 'eventsCtrl'
       }).
-      when('/event', {
+      when('/event/:id', {
         templateUrl: 'partials/event-detail.html',
-        controller: 'eventCtrl'
+        controller: 'eventsDetailCtrl'
       })
   }]);
 
