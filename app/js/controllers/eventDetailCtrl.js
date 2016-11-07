@@ -9,6 +9,7 @@ cityApp.controller('eventsDetailCtrl',
     $scope.positionLat;
     $scope.positionLong;
     $scope.content;
+    $scope.mapUrl;
 
     $scope.base_url = 'http://citysdk.dmci.hva.nl/CitySDK/events/';
 
@@ -17,14 +18,22 @@ cityApp.controller('eventsDetailCtrl',
         $scope.evenName = data.label[0].value;
         $scope.positionLat = data.location.point[0].Point.posList.split(" ")[0];
         $scope.positionLong = data.location.point[0].Point.posList.split(" ")[1];
-        //$scope.desc = data.description.value[0];
+
         for(var i in data.description) {
           data.description[i].lang.toString() === 'en-GB' ? $scope.content = data.description[i].value : $scope.content = 'No EN description'
         }
-        console.log(data.description);
+
+        $scope.mapUrl = "http://maps.google.com/maps?q="+
+          $scope.positionLat + "," + $scope.positionLong +
+          "&z=15&output=embed";
+        console.log(data);
       });
 
     $scope.getHtml = function(html){
         return $sce.trustAsHtml(html);
     };
+
+    $scope.setTrustURL = function(url){
+      return $sce.trustAsResourceUrl(url)
+    }
   })
