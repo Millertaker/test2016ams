@@ -1,3 +1,13 @@
 <div>
-  list of events
+
+
+  <p>Click on show details button to see event detail</p>
+  <ul class="events">
+    <li class="header"><h3>List of events</h3></li>
+    <li ng-repeat="event in events">
+      <p>{{event.label[0].value}}</p>
+
+      <a class="detail" href="#/event">See detail</a>
+    </li>
+  </ul>
 </div>

@@ -1,4 +1,4 @@
-//@import "theme-blue/variables.less";
+@import "theme-basic/colors.less";
 
 body {
   font-size: 15px;
@@ -9,6 +9,56 @@ body {
 
 p, h1, h2, h3, h4, a, b, span, div{
   font-family: Arial;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  margin: 0;
+}
+
+ul.events{
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  li{
+    padding: 15px 10px;
+    background-color: @light-grey;
+    border-bottom: 1px solid grey;
+  }
+
+  .header{
+    background-color: @header-color;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+  }
+
+  .header h3{
+    margin: 0px;
+  }
+
+  p{
+    display: inline;
+  }
+
+  a.detail{
+    border-width: 1px;
+    float: right;
+    background-color: @select-button-color;
+    border-color: @select-button-border;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: white;
+    margin-top: -4px;
+  }
+}
+
+select-event-button{
+
 }
 
 .fullsizedcontent{
